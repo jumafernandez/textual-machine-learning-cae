@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping con Python y Selenium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #26a69a; /* Verde claro */
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logo_py {
+            width: 160px; /* Aumenté el ancho del logo */
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo_se {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .content p {
+            margin: 0; /* Para que el párrafo no tenga margen y no haya diferencia de color */
+            padding: 0; /* También eliminamos el padding para evitar diferencias */
+        }
+
+        /* Estilos responsive */
+        @media screen and (max-width: 600px) {
+            .logo_py {
+                width: 100px;
+            }
+
+            .logo_se {
+                width: 100px;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo_py" src="https://www.python.org/static/img/python-logo.png" alt="Logo Python">
+        <h1>Taller de Web Scraping con Python y Selenium</h1>
+        <img class="logo_se" src="https://www.selenium.dev/favicons/apple-touch-icon-180x180.png" alt="Logo Selenium">
+    </header>
+    <div class="container">
+        <div class="content">
+            <p>En este repositorio se encuentran todos los materiales del Taller de "Web Scraping on Python" dictado para el personal técnico de la Dirección Provincial de Estadística de la Provincia de Buenos Aires en el marco del Proyecto SOCO (Sistema para la obtención automática de datos para el Índice de Precios al Consumidor de la Provincia de Buenos Aires).</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th># Encuentro</th>
+                    <th>Temas</th>
+                    <th>Presentación</th>
+                    <th>Ejercitación</th>
+                    <th>Recursos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Encuentro 1</td>
+                    <td>Introducción a HTML, Requests y BeautifulSoup</td>
+                    <td><a target="_blank" href="https://docs.google.com/presentation/d/141ejreneeXM3VynC9v2ha-gk2iTR7Es58WTyjLCYLVU/edit?usp=sharing">Presentación-01</a></td>
+                    <td><a target="_blank" href="https://docs.google.com/document/d/14UBL2_nVPcEG-C2DHOWozuuXeJmK-VJkcWzj9NeB8qY/edit?usp=sharing">Ejercitación-01</a></td>
+                    <td><a target="_blank" href="https://github.com/jumafernandez/soco-web_scraping/tree/main/data/encuentro-01">data</a> | <a target="_blank" href="https://github.com/jumafernandez/soco-web_scraping/tree/main/code/encuentro-01">code</a> </td>
+                </tr>
+                <tr>
+                    <td>Encuentro 2</td>
+                    <td>Introducción a Selenium</td>
+                    <td><a target="_blank" href="https://docs.google.com/presentation/d/1HWDJctHokTrECKJV0FvxTW0BL1qNipCUIkEKmQ3mWwk/edit?usp=sharing">Presentación-02</a></td>
+                    <td><a target="_blank" href="https://docs.google.com/document/d/1i978equKH64e6zf-7wpnvja1Gro3sOSrEH-EmSbfjYA/edit?usp=sharing">Ejercitación-02</a></td>
+                    <td><a target="_blank" href="https://github.com/jumafernandez/soco-web_scraping/tree/main/data/encuentro-02">data</a> | <a target="_blank" href="https://github.com/jumafernandez/soco-web_scraping/tree/main/code/encuentro-02">code</a> </td>
+                </tr>
+                <tr>
+                    <td>Encuentro 3</td>
+                    <td>Extracción de datos con Selenium</td>
+                    <td><a target="_blank" href="https://docs.google.com/presentation/d/1CelXD9AZM3QgK5V75nGqIFJd9vCeA7vJ94gQlw5IrY8/edit?usp=sharing">Presentación-03</a></td>
+                    <td><a target="_blank" href="https://docs.google.com/document/d/1NJfSCzKDUQBr6926MdEcMRZB2p6mfs5aUDMaTUyLmYc/edit?usp=sharing">Ejercitación-03</a></td>
+                    <td><a target="_blank" href="https://github.com/jumafernandez/soco-web_scraping/tree/main/data/encuentro-03">data</a> | <a target="_blank" href="https://github.com/jumafernandez/soco-web_scraping/tree/main/code/encuentro-03">code</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer">
+        <p>© 2024 Taller de Web Scraping con Python y Selenium</p>
+    </div>
+</body>
+</html>
