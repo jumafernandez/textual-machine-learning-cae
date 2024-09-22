@@ -1,6 +1,6 @@
 # Aprendizaje Automático con datos textuales en Python
 
-En este repositorio se encuentran todos los materiales del Mini-curso "Aprendizaje Automático con datos textuales en Python" dictado en el marco del Coloquio Argentino de Estadística, desarrollado en la Universidad Nacional de Luján entre los días 25 y 27 de octubre de 2024.
+En este repositorio se encuentran todos los materiales del Mini-curso "Aprendizaje Automático con datos textuales en Python" dictado en el marco del Coloquio Argentino de Estadística, desarrollado en la Universidad Nacional de Luján entre los días 25 y 27 de septiembre de 2024.
 
 A continuación se pone a disposición el material para los 3 encuentros sincrónicos y la ejercitación propuesta:
 
