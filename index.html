@@ -22,9 +22,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #C5EACB; /* Verde claro */
+            background-color: #3834da;
             color: #fff;
-            padding: 10px 20px;
+            padding: 30px 20px;
         }
 
         header h1 {
@@ -33,13 +33,13 @@
         }
 
         .logo_py {
-            width: 160px; /* Aumenté el ancho del logo */
+            width: 160px;
             height: 50px;
             margin-right: 10px;
         }
 
         .logo_se {
-            height: 50px;
+            height: 80px;
             margin-right: 10px;
         }
 
@@ -81,8 +81,26 @@
         }
 
         .content p {
-            margin: 0; /* Para que el párrafo no tenga margen y no haya diferencia de color */
-            padding: 0; /* También eliminamos el padding para evitar diferencias */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para la imagen de escudos */
+        .escudos {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .escudos img {
+            max-width: 100%;
+            width: 400px; /* Ajustamos el tamaño proporcionalmente */
+            height: auto;
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 8px; /* Opcional: redondear los bordes */
+            background-color: #fff; /* Opcional: fondo blanco */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra para suavizar */
         }
 
         /* Estilos responsive */
@@ -101,6 +119,10 @@
 
             table {
                 font-size: 14px;
+            }
+
+            .escudos img {
+                width: 300px; /* Ajuste para pantallas pequeñas */
             }
         }
     </style>
@@ -146,8 +168,14 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Sección para la imagen de los escudos -->
+    <div class="escudos">
+        <img src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/escudos.png" alt="Escudos">
+    </div>
+
     <div class="footer">
-        <p>© 2024 LICDIA</p>
+        <p>© 2024 Laboratorio de Ciencia de Datos & Inteligencia Artificial (LICDIA)</p>
     </div>
 </body>
 </html>
