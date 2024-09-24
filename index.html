@@ -20,6 +20,7 @@
 
         header {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             background-color: #3834da;
@@ -29,17 +30,24 @@
 
         header h1 {
             margin: 0;
-            font-size: 28;
+            font-size: 24px;
+            text-align: center;
+            flex: 1 100%;
         }
 
-        .logo_coloquio {
-            height: 65px;
-            margin-right: 10px;
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex: 1 100%;
         }
 
+        .logo_py,
         .logo_se {
-            height: 80px;
-            margin-right: 10px;
+            max-height: 80px;
+            height: auto;
+            max-width: 150px;
         }
 
         .content {
@@ -51,10 +59,7 @@
         .footer {
             text-align: center;
             color: #777;
-        }
-
-        .footer p {
-            margin: 0;
+            margin-top: 20px;
         }
 
         table {
@@ -78,11 +83,6 @@
             background-color: #f2f2f2;
         }
 
-        .content p {
-            margin: 0;
-            padding: 0;
-        }
-
         /* Estilos para la imagen de escudos */
         .escudos {
             display: flex;
@@ -92,23 +92,20 @@
 
         .escudos img {
             max-width: 100%;
-            width: 300px; /* Ajustamos el tamaño proporcionalmente */
+            width: 300px;
             height: auto;
-            margin: 20px 0;
         }
 
         /* Estilos responsive */
-        @media screen and (max-width: 600px) {
-            .logo_coloquio {
-                width: 100px;
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
             }
 
+            .logo_py,
             .logo_se {
-                width: 100px;
-            }
-
-            header h1 {
-                font-size: 20px;
+                max-height: 60px;
+                max-width: 120px;
             }
 
             table {
@@ -116,20 +113,41 @@
             }
 
             .escudos img {
-                width: 300px; /* Ajuste para pantallas pequeñas */
+                width: 250px; /* Ajuste para pantallas medianas */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            .logo_py,
+            .logo_se {
+                max-height: 50px;
+                max-width: 100px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            .escudos img {
+                width: 200px; /* Ajuste para pantallas pequeñas */
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div>
-            <img class="logo_coloquio" src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/logo-iasi.png" alt="Logo IASI">
-            <img class="logo_coloquio" src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/logo-sae.png" alt="Logo SAE">
+        <div class="logos">
+            <img class="logo_py" src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/logo-iasi.png" alt="Logo IASI">
+            <img class="logo_py" src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/logo-sae.png" alt="Logo SAE">
+            <img class="logo_se" src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/logo-licdia.png" alt="Logo Selenium">
         </div>
         <h1>Aprendizaje Automático con datos textuales en Python</h1>
-        <img class="logo_se" src="https://raw.githubusercontent.com/jumafernandez/textual-machine-learning-cae/refs/heads/main/web/imgs/logo-licdia.png" alt="Logo Selenium">
     </header>
+
     <div class="container">
         <div class="content">
             <p>En este repositorio se encuentran todos los materiales del Mini-curso "Aprendizaje Automático con datos textuales en Python" dictado en el marco del Coloquio Argentino de Estadística, desarrollado en la Universidad Nacional de Luján entre los días 25 y 27 de septiembre de 2024.</p>
@@ -148,19 +166,19 @@
                     <td>Encuentro 1</td>
                     <td>Desafíos del análisis textual y estrategias de representación de documentos clásicas</td>
                     <td><a target="_blank" href="https://docs.google.com/presentation/d/1LQpJIH3DrHtMujyLi0kSKyVJfVZd1kv3dsBZqhNL0ik/edit?usp=sharing">Presentación-01</a></td>
-                    <td><a target="_blank" href="https://github.com/jumafernandez/textual-machine-learning-cae/blob/main/data/data-train.csv">data</a> | <a target="_blank" href="https://colab.research.google.com/drive/1nX2b2kpAPdalaZH1Rm-QfWgG0-9zRzY4?usp=sharing">Notebook</a> </td>
+                    <td><a target="_blank" href="https://github.com/jumafernandez/textual-machine-learning-cae/blob/main/data/encuentro-01/data-train.csv">data</a> | <a target="_blank" href="https://colab.research.google.com/drive/1nX2b2kpAPdalaZH1Rm-QfWgG0-9zRzY4?usp=sharing">Notebook</a> </td>
                 </tr>
                 <tr>
                     <td>Encuentro 2</td>
                     <td>Representaciones basadas en embeddings y preprocesamiento de texto</td>
                     <td><a target="_blank" href="https://docs.google.com/presentation/d/1Ud8KRv35kUKauaFWJXoB3l3MgkNAv0_W9Ko17cY4KO8/edit?usp=sharing">Presentación-02</a></td>
-                    <td><a target="_blank" href="https://github.com/jumafernandez/textual-machine-learning-cae/blob/main/data/data-train.csv">data</a> | <a target="_blank" href="">Notebook 1</a> | <a target="_blank" href="https://colab.research.google.com/drive/1NTvGA03-LSGh_qFMKMLfUs9FlxSFEwFc?usp=sharing">Notebook 2</a> </td>
+                    <td><a target="_blank" href="https://github.com/jumafernandez/textual-machine-learning-cae/blob/main/data/encuentro-01/data-train.csv">data</a> | <a target="_blank" href="">Notebook 1</a> | <a target="_blank" href="https://colab.research.google.com/drive/1NTvGA03-LSGh_qFMKMLfUs9FlxSFEwFc?usp=sharing">Notebook 2</a> </td>
                 </tr>
                 <tr>
                     <td>Encuentro 3</td>
-                    <td>Clasificación automática y visualización de datos textuales</td>
-                    <td><a target="_blank" href="https://docs.google.com/presentation/d/1pY81GhUkXlFm0nnu_yvQcsDcoRb_O7PpKiYHSsmq_j8/edit?usp=sharing">Presentación-03</a></td>
-                    <td><a target="_blank" href="https://github.com/jumafernandez/textual-machine-learning-cae/blob/main/data/data-train.csv">Train data</a> | <a target="_blank" href="https://github.com/jumafernandez/textual-machine-learning-cae/blob/main/data/data-test.csv">Test data</a> | <a target="_blank" href="">Notebook</a> </td>
+                    <td>Técnicas de clasificación para datos textuales</td>
+                    <td><a target="_blank" href="">Presentación-03</a></td>
+                    <td><a target="_blank" href="">data</a> | <a target="_blank" href="">code</a> </td>
                 </tr>
             </tbody>
         </table>
